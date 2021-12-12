@@ -1,13 +1,6 @@
-//modelo
-//interface
-//repositorio
-//servicio
-//controlador
-
-
 package Reto2_Web;
 import Reto2_Web.interfaces.InterfaceUser;
-import Reto2_Web.interfaces.InterfaceSupplements;
+import Reto2_Web.interfaces.InterfaceVegetarian;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,7 +11,7 @@ import org.springframework.stereotype.Component;
 @SpringBootApplication
 public class Reto2WebApplication implements CommandLineRunner {
    @Autowired
-    private InterfaceSupplements interfaceSupplements;
+    private InterfaceVegetarian interfaceVegetarian;
     @Autowired
     private InterfaceUser interfaceUser;
 	public static void main(String[] args) {
@@ -26,7 +19,7 @@ public class Reto2WebApplication implements CommandLineRunner {
 	}
           @Override
     public void run(String... args) throws Exception {
-        interfaceSupplements.deleteAll();
+        interfaceVegetarian.deleteAll();
         interfaceUser.deleteAll();
     }
         
